@@ -1,1 +1,24 @@
 learnings.txt
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
