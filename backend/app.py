@@ -6,10 +6,10 @@ from fastapi import FastAPI, HTTPException
 
 from backend.schemas import CreditRiskInput
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-MODEL_PATH = BASE_DIR / "stacking_classifier_model.pkl"
-SCALER_PATH = BASE_DIR / "scaler.pkl"
+MODEL_PATH = BASE_DIR / "models" / "stacking_classifier_model.pkl"
+SCALER_PATH = BASE_DIR / "models" / "scaler.pkl"
 
 model = joblib.load(MODEL_PATH)
 scaler = joblib.load(SCALER_PATH)
@@ -111,7 +111,7 @@ def predict(data : CreditRiskInput):
         
         scaled_input = scaler.transform(input_df)
         
-        prediction = model.predict(scaled_input)[1]
+        prediction = model.predict(scaled_input)[0]
         
         risk_mapping = {
             0 : "Good",
