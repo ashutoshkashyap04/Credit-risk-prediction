@@ -1,28 +1,30 @@
 # 💳 Credit Risk Prediction
 
-\<p align="center">
-&#x20; \<strong>An End-to-End Machine Learning Application for Credit Risk Assessment\</strong>
-\</p>
 
-\<p align="center">
-&#x20; \<a href="[https://credit-risk-prediction04.streamlit.app/](https://credit-risk-prediction04.streamlit.app/)">
-&#x20;   \<img src="[https://img.shields.io/badge/Live%20App-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white](https://img.shields.io/badge/Live%20App-Streamlit-FF4B4B?style=for-the-badge\&logo=streamlit\&logoColor=white)" alt="Live Streamlit App">
-&#x20; \</a>
-&#x20; \<a href="[https://credit-risk-prediction-nkak.onrender.com](https://credit-risk-prediction-nkak.onrender.com)">
-&#x20;   \<img src="[https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge\&logo=fastapi\&logoColor=white)" alt="FastAPI Backend">
-&#x20; \</a>
-&#x20; \<a href="[https://github.com/ashutoshkashyap04/Credit-risk-prediction](https://github.com/ashutoshkashyap04/Credit-risk-prediction)">
-&#x20;   \<img src="[https://img.shields.io/badge/Repository-GitHub-181717?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/Repository-GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)" alt="GitHub Repository">
-&#x20; \</a>
-\</p>
+<p align="center">
+  <strong>An End-to-End Machine Learning Application for Credit Risk Assessment</strong>
+</p>
 
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square\&logo=python\&logoColor=white)" alt="Python">
-&#x20; \<img src="[https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?style=flat-square&logo=scikitlearn&logoColor=white](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?style=flat-square\&logo=scikitlearn\&logoColor=white)" alt="Scikit-learn">
-&#x20; \<img src="[https://img.shields.io/badge/XGBoost-Boosting-189B62?style=flat-square](https://img.shields.io/badge/XGBoost-Boosting-189B62?style=flat-square)" alt="XGBoost">
-&#x20; \<img src="[https://img.shields.io/badge/Deployment-Render-46E3B7?style=flat-square&logo=render&logoColor=black](https://img.shields.io/badge/Deployment-Render-46E3B7?style=flat-square\&logo=render\&logoColor=black)" alt="Render">
-&#x20; \<img src="[https://img.shields.io/badge/Status-Deployed-success?style=flat-square](https://img.shields.io/badge/Status-Deployed-success?style=flat-square)" alt="Deployment Status">
-\</p>
+<p align="center">
+  <a href="https://credit-risk-prediction04.streamlit.app/">
+    <img src="https://img.shields.io/badge/Live%20App-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Live Streamlit App">
+  </a>
+  <a href="https://credit-risk-prediction-nkak.onrender.com">
+    <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI Backend">
+  </a>
+  <a href="https://github.com/ashutoshkashyap04/Credit-risk-prediction">
+    <img src="https://img.shields.io/badge/Repository-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="Scikit-learn">
+  <img src="https://img.shields.io/badge/XGBoost-Boosting-189B62?style=flat-square" alt="XGBoost">
+  <img src="https://img.shields.io/badge/Deployment-Render-46E3B7?style=flat-square&logo=render&logoColor=black" alt="Render">
+  <img src="https://img.shields.io/badge/Status-Deployed-success?style=flat-square" alt="Deployment Status">
+</p>
+
 
 ---
 
@@ -177,18 +179,20 @@ Credit-risk-prediction/
 
 ## 🛠️ Tech Stack
 
-\<p>
-&#x20; \<img src="[https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white](https://img.shields.io/badge/Python-3776AB?style=flat-square\&logo=python\&logoColor=white)" alt="Python">
-&#x20; \<img src="[https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white](https://img.shields.io/badge/Pandas-150458?style=flat-square\&logo=pandas\&logoColor=white)" alt="Pandas">
-&#x20; \<img src="[https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white](https://img.shields.io/badge/NumPy-013243?style=flat-square\&logo=numpy\&logoColor=white)" alt="NumPy">
-&#x20; \<img src="[https://img.shields.io/badge/Matplotlib-11557C?style=flat-square](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square)" alt="Matplotlib">
-&#x20; \<img src="[https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square](https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square)" alt="Seaborn">
-&#x20; \<img src="[https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square\&logo=scikitlearn\&logoColor=white)" alt="Scikit-learn">
-&#x20; \<img src="[https://img.shields.io/badge/XGBoost-189B62?style=flat-square](https://img.shields.io/badge/XGBoost-189B62?style=flat-square)" alt="XGBoost">
-&#x20; \<img src="[https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white](https://img.shields.io/badge/FastAPI-009688?style=flat-square\&logo=fastapi\&logoColor=white)" alt="FastAPI">
-&#x20; \<img src="[https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square\&logo=streamlit\&logoColor=white)" alt="Streamlit">
-&#x20; \<img src="[https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black](https://img.shields.io/badge/Render-46E3B7?style=flat-square\&logo=render\&logoColor=black)" alt="Render">
-\</p>
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas">
+  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy">
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square" alt="Matplotlib">
+  <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square" alt="Seaborn">
+  <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="Scikit-learn">
+  <img src="https://img.shields.io/badge/XGBoost-189B62?style=flat-square" alt="XGBoost">
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black" alt="Render">
+</p>
+
 
 | Category              | Tools                             |
 | --------------------- | --------------------------------- |
@@ -440,16 +444,18 @@ The fitted `StandardScaler` was also saved as `models/scaler.pkl` for reuse duri
 
 ### Final Test Results
 
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Accuracy-78.5%25-2563EB?style=for-the-badge](https://img.shields.io/badge/Accuracy-78.5%25-2563EB?style=for-the-badge)" alt="Accuracy 78.5%">
-&#x20; \<img src="[https://img.shields.io/badge/Precision-69.8%25-0D9488?style=for-the-badge](https://img.shields.io/badge/Precision-69.8%25-0D9488?style=for-the-badge)" alt="Precision 69.8%">
-\</p>
 
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Recall-50.0%25-D97706?style=for-the-badge](https://img.shields.io/badge/Recall-50.0%25-D97706?style=for-the-badge)" alt="Recall 50%">
-&#x20; \<img src="[https://img.shields.io/badge/F1--Score-58.3%25-7C3AED?style=for-the-badge](https://img.shields.io/badge/F1--Score-58.3%25-7C3AED?style=for-the-badge)" alt="F1 score 58.3%">
-&#x20; \<img src="[https://img.shields.io/badge/ROC--AUC-78.2%25-475569?style=for-the-badge](https://img.shields.io/badge/ROC--AUC-78.2%25-475569?style=for-the-badge)" alt="ROC-AUC 78.2%">
-\</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Accuracy-78.5%25-2563EB?style=for-the-badge" alt="Accuracy 78.5%">
+  <img src="https://img.shields.io/badge/Precision-69.8%25-0D9488?style=for-the-badge" alt="Precision 69.8%">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Recall-50.0%25-D97706?style=for-the-badge" alt="Recall 50%">
+  <img src="https://img.shields.io/badge/F1--Score-58.3%25-7C3AED?style=for-the-badge" alt="F1 score 58.3%">
+  <img src="https://img.shields.io/badge/ROC--AUC-78.2%25-475569?style=for-the-badge" alt="ROC-AUC 78.2%">
+</p>
+
 
 | Metric                 | Final Score |
 | ---------------------- | ----------: |
@@ -721,24 +727,18 @@ The precise JSON response structure is defined by `backend/app.py`.
 🎓 BS-MS in Artificial Intelligence & Cyber Security
 🏛️ Indian Institute of Technology Patna
 
-\<p>
-&#x20; \<a href="[https://github.com/ashutoshkashyap04](https://github.com/ashutoshkashyap04)">
-&#x20;   \<img src="[https://img.shields.io/badge/GitHub-ashutoshkashyap04-181717?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/GitHub-ashutoshkashyap04-181717?style=for-the-badge\&logo=github\&logoColor=white)" alt="GitHub Profile">
-&#x20; \</a>
-&#x20; \<a href="[https://github.com/ashutoshkashyap04/Credit-risk-prediction](https://github.com/ashutoshkashyap04/Credit-risk-prediction)">
-&#x20;   \<img src="[https://img.shields.io/badge/Project-Credit%20Risk%20Prediction-2563EB?style=for-the-badge](https://img.shields.io/badge/Project-Credit%20Risk%20Prediction-2563EB?style=for-the-badge)" alt="Project Repository">
-&#x20; \</a>
-\</p>
 
----
+<p align="center">
+  <img src="https://img.shields.io/badge/Accuracy-78.5%25-2563EB?style=for-the-badge" alt="Accuracy 78.5%">
+  <img src="https://img.shields.io/badge/Precision-69.8%25-0D9488?style=for-the-badge" alt="Precision 69.8%">
+</p>
 
-\<p align="center">
-&#x20; \<strong>Built with Python, Machine Learning, FastAPI, and Streamlit.\</strong>
-\</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Recall-50.0%25-D97706?style=for-the-badge" alt="Recall 50%">
+  <img src="https://img.shields.io/badge/F1--Score-58.3%25-7C3AED?style=for-the-badge" alt="F1 score 58.3%">
+  <img src="https://img.shields.io/badge/ROC--AUC-78.2%25-475569?style=for-the-badge" alt="ROC-AUC 78.2%">
+</p>
 
-\<p align="center">
-&#x20; ⭐ If you find this project useful, consider giving the repository a star!
-\</p>
 
 **Disclaimer:** This project is intended for educational and demonstration purposes. Its predictions should not be used as the sole basis for actual credit approval, rejection, or other consequential financial decisions.
 
