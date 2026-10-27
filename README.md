@@ -728,15 +728,23 @@ The precise JSON response structure is defined by `backend/app.py`.
 🏛️ Indian Institute of Technology Patna
 
 
+<p>
+  <a href="https://github.com/ashutoshkashyap04">
+    <img src="https://img.shields.io/badge/GitHub-ashutoshkashyap04-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile">
+  </a>
+  <a href="https://github.com/ashutoshkashyap04/Credit-risk-prediction">
+    <img src="https://img.shields.io/badge/Project-Credit%20Risk%20Prediction-2563EB?style=for-the-badge" alt="Project Repository">
+  </a>
+</p>
+
+---
+
 <p align="center">
-  <img src="https://img.shields.io/badge/Accuracy-78.5%25-2563EB?style=for-the-badge" alt="Accuracy 78.5%">
-  <img src="https://img.shields.io/badge/Precision-69.8%25-0D9488?style=for-the-badge" alt="Precision 69.8%">
+  <strong>Built with Python, Machine Learning, FastAPI, and Streamlit.</strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Recall-50.0%25-D97706?style=for-the-badge" alt="Recall 50%">
-  <img src="https://img.shields.io/badge/F1--Score-58.3%25-7C3AED?style=for-the-badge" alt="F1 score 58.3%">
-  <img src="https://img.shields.io/badge/ROC--AUC-78.2%25-475569?style=for-the-badge" alt="ROC-AUC 78.2%">
+  ⭐ If you find this project useful, consider giving the repository a star!
 </p>
 
 
