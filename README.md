@@ -1,144 +1,159 @@
-# Credit Risk Prediction
+# 💳 Credit Risk Prediction
 
-An end-to-end machine learning project that predicts whether a loan applicant represents a **Good Credit Risk** or a **Bad Credit Risk**. The project covers exploratory data analysis, data preprocessing, model comparison, hyperparameter tuning, ensemble learning, model evaluation, REST API development, and cloud deployment.
+\<p align="center">
+&#x20; \<strong>An End-to-End Machine Learning Application for Credit Risk Assessment\</strong>
+\</p>
 
-**Live Application:** [Credit Risk Prediction — Streamlit](https://credit-risk-prediction04.streamlit.app/)
+\<p align="center">
+&#x20; \<a href="[https://credit-risk-prediction04.streamlit.app/](https://credit-risk-prediction04.streamlit.app/)">
+&#x20;   \<img src="[https://img.shields.io/badge/Live%20App-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white](https://img.shields.io/badge/Live%20App-Streamlit-FF4B4B?style=for-the-badge\&logo=streamlit\&logoColor=white)" alt="Live Streamlit App">
+&#x20; \</a>
+&#x20; \<a href="[https://credit-risk-prediction-nkak.onrender.com](https://credit-risk-prediction-nkak.onrender.com)">
+&#x20;   \<img src="[https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge\&logo=fastapi\&logoColor=white)" alt="FastAPI Backend">
+&#x20; \</a>
+&#x20; \<a href="[https://github.com/ashutoshkashyap04/Credit-risk-prediction](https://github.com/ashutoshkashyap04/Credit-risk-prediction)">
+&#x20;   \<img src="[https://img.shields.io/badge/Repository-GitHub-181717?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/Repository-GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)" alt="GitHub Repository">
+&#x20; \</a>
+\</p>
 
-**Backend API:** [FastAPI on Render](https://credit-risk-prediction-nkak.onrender.com)
-
-**GitHub Repository:** [Credit-risk-prediction](https://github.com/ashutoshkashyap04/Credit-risk-prediction)
-
----
-
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Problem Statement](#problem-statement)
-- [Project Objectives](#project-objectives)
-- [Dataset Description](#dataset-description)
-- [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [Machine Learning Workflow](#machine-learning-workflow)
-  - [1. Data Loading and Exploratory Data Analysis](#1-data-loading-and-exploratory-data-analysis)
-  - [2. Data Preprocessing](#2-data-preprocessing)
-  - [3. Model Training and Evaluation](#3-model-training-and-evaluation)
-  - [4. Hyperparameter Tuning](#4-hyperparameter-tuning)
-  - [5. Stacking Classifier](#5-stacking-classifier)
-  - [6. Final Model Evaluation](#6-final-model-evaluation)
-- [Model Performance](#model-performance)
-- [Application Architecture](#application-architecture)
-- [Deployment](#deployment)
-- [Run Locally](#run-locally)
-- [API Usage](#api-usage)
-- [Key Learnings](#key-learnings)
-- [Limitations and Future Improvements](#limitations-and-future-improvements)
-- [Author](#author)
+\<p align="center">
+&#x20; \<img src="[https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square\&logo=python\&logoColor=white)" alt="Python">
+&#x20; \<img src="[https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?style=flat-square&logo=scikitlearn&logoColor=white](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?style=flat-square\&logo=scikitlearn\&logoColor=white)" alt="Scikit-learn">
+&#x20; \<img src="[https://img.shields.io/badge/XGBoost-Boosting-189B62?style=flat-square](https://img.shields.io/badge/XGBoost-Boosting-189B62?style=flat-square)" alt="XGBoost">
+&#x20; \<img src="[https://img.shields.io/badge/Deployment-Render-46E3B7?style=flat-square&logo=render&logoColor=black](https://img.shields.io/badge/Deployment-Render-46E3B7?style=flat-square\&logo=render\&logoColor=black)" alt="Render">
+&#x20; \<img src="[https://img.shields.io/badge/Status-Deployed-success?style=flat-square](https://img.shields.io/badge/Status-Deployed-success?style=flat-square)" alt="Deployment Status">
+\</p>
 
 ---
 
-## Project Overview
+## 📌 Table of Contents
 
-Credit risk assessment is an important task in the financial services industry. Lenders need to assess the likelihood that applicants will repay their loans to help manage potential credit losses.
+- [🌟 Project Overview](#-project-overview)
+- [🎯 Problem Statement](#-problem-statement)
+- [📊 Dataset Overview](#-dataset-overview)
+- [🗂️ Project Structure](#️-project-structure)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [⚙️ Machine Learning Workflow](#️-machine-learning-workflow)
+- [📈 Model Performance](#-model-performance)
+- [🔍 Final Model Evaluation](#-final-model-evaluation)
+- [🏗️ Application Architecture](#️-application-architecture)
+- [🚀 Live Deployment](#-live-deployment)
+- [💻 Run Locally](#-run-locally)
+- [🔌 API Usage](#-api-usage)
+- [💡 Key Learnings](#-key-learnings)
+- [🔮 Future Improvements](#-future-improvements)
+- [👨‍💻 Author](#-author)
 
-This project develops a binary classification model using the German Credit Risk Dataset. It uses applicant demographic information, account balances, credit amount, loan duration, and loan purpose to classify applicants into good-credit and bad-credit categories.
+---
 
-Rather than relying on accuracy alone, the project compares multiple evaluation metrics, including precision, recall, F1-score, and ROC-AUC. This is particularly important because the dataset contains more good-credit applicants than bad-credit applicants.
+## 🌟 Project Overview
 
-After comparing nine machine learning algorithms and tuning the strongest candidates, a **Stacking Classifier** was selected as the final model. The trained model was integrated into a FastAPI backend and a Streamlit frontend, and both components were deployed online.
+**Credit Risk Prediction** is an end-to-end machine learning project that classifies loan applicants into two categories:
 
-## Problem Statement
+- 🟢 **Good Credit (0):** Applicants belonging to the lower-risk class.
+- 🔴 **Bad Credit (1):** Applicants belonging to the higher-risk class.
 
-Financial institutions face the challenge of distinguishing applicants who represent relatively low credit risk from those who may have difficulty repaying their loans.
+The project uses applicant information such as age, employment category, housing status, account balances, credit amount, loan duration, and loan purpose to predict credit risk.
 
-A model that predicts every applicant as good credit could achieve deceptively high accuracy while failing to identify risky applicants. Therefore, credit risk prediction requires a balanced evaluation of correctly identifying bad-credit applicants and avoiding incorrect risk classifications.
+Nine machine learning algorithms were compared, the strongest candidates were optimized using hyperparameter tuning, and a **Stacking Classifier** was selected as the final model.
 
-The objective is to build and deploy a machine learning application that predicts credit risk from applicant information and demonstrates an end-to-end data science workflow.
+The trained model was integrated into a FastAPI REST API and connected to an interactive Streamlit application. Both components are deployed online.
 
-## Project Objectives
+### ✨ Project Highlights
 
-- Explore and understand the distribution of applicant characteristics and credit risk.
-- Identify and handle missing values in savings and checking account information.
-- Encode categorical variables into numerical features suitable for machine learning.
-- Preserve the target class distribution using stratified train-test splitting.
-- Train and compare nine baseline machine learning algorithms.
-- Select promising models using the F1-score.
-- Optimize model hyperparameters using cross-validation.
-- Compare tuned models with a Stacking Classifier.
-- Evaluate the selected model using classification metrics and a confusion matrix.
-- Save the trained model and scaler for inference.
-- Develop a REST API using FastAPI.
-- Build an interactive prediction interface using Streamlit.
-- Deploy the backend on Render and the frontend on Streamlit Community Cloud.
+| Feature                      | Description                                                       |
+| ---------------------------- | ----------------------------------------------------------------- |
+| 📊 Exploratory Data Analysis | Missing-value analysis, feature distributions, and visualizations |
+| 🧹 Data Preprocessing        | Missing-value handling, categorical encoding, and feature scaling |
+| 🤖 Model Comparison          | Evaluation of nine classification algorithms                      |
+| 🎛️ Hyperparameter Tuning    | RandomizedSearchCV with five-fold cross-validation                |
+| 🧠 Ensemble Learning         | Stacking Classifier with Logistic Regression as the meta-model    |
+| 📉 Model Evaluation          | Precision, recall, F1-score, ROC-AUC, and confusion matrix        |
+| ⚡ Backend API                | FastAPI with Pydantic request validation                          |
+| 🖥️ Interactive Frontend     | Streamlit application                                             |
+| ☁️ Cloud Deployment          | Render and Streamlit Community Cloud                              |
 
-## Dataset Description
+---
 
-The project uses the **German Credit Risk Dataset**, containing 1,000 loan applicant records and 10 columns, including the target variable.
+## 🎯 Problem Statement
 
-### Dataset overview
+Credit risk assessment is an important part of lending because financial institutions must evaluate the possibility that applicants will fail to repay their loans.
 
-| Property | Description |
-|---|---|
-| Total records | 1,000 |
-| Original columns | 10 |
-| Training records | 800 |
-| Testing records | 200 |
-| Problem type | Binary classification |
-| Target variable | `Risk` |
-| Good-credit applicants | 700 (70%) |
-| Bad-credit applicants | 300 (30%) |
+A model that predicts most applicants as good credit may achieve reasonable accuracy while missing a significant proportion of risky applicants.
 
-### Features
+Therefore, this project focuses on evaluating multiple classification metrics rather than relying exclusively on accuracy.
 
-| Feature | Description |
-|---|---|
-| `Age` | Age of the applicant |
-| `Sex` | Applicant's recorded sex |
-| `Job` | Encoded job skill level |
-| `Housing` | Housing status |
-| `Saving accounts` | Savings account category |
-| `Checking account` | Checking account category |
-| `Credit amount` | Amount of credit requested |
-| `Duration` | Credit duration |
-| `Purpose` | Purpose of the credit |
-| `Risk` | Target classification |
+The objective is to develop a machine learning application that predicts credit risk from applicant information and demonstrates the complete workflow from raw data exploration to cloud deployment.
 
-### Target variable
+---
 
-The target variable `Risk` is encoded as follows:
+## 📊 Dataset Overview
 
-| Encoded value | Meaning |
-|---|---|
-| `0` | Good Credit — lower-risk class |
-| `1` | Bad Credit — higher-risk class |
+The project uses the **German Credit Risk Dataset**, containing 1,000 applicant records and 10 original columns.
 
-The dataset contains a **70:30 class distribution**, making it moderately imbalanced. Consequently, accuracy alone is insufficient for evaluating the model.
+### 📋 Dataset Statistics
 
-## Project Structure
+| Property                     | Value                           |
+| ---------------------------- | ------------------------------- |
+| Total records                | 1,000                           |
+| Original features            | 9                               |
+| Target variable              | `Risk`                          |
+| Training samples             | 800                             |
+| Testing samples              | 200                             |
+| Classification type          | Binary                          |
+| Original target distribution | 70% good credit, 30% bad credit |
 
-The repository is organized into separate directories for notebooks, datasets, model artifacts, the backend API, and the frontend application.
+### 🎯 Target Distribution
+
+| Class          | Encoded Value |   Records | Percentage |
+| -------------- | ------------: | --------: | ---------: |
+| 🟢 Good Credit |             0 |       700 |        70% |
+| 🔴 Bad Credit  |             1 |       300 |        30% |
+| **Total**      |             — | **1,000** |   **100%** |
+
+The dataset is moderately imbalanced. Stratified splitting was used to maintain approximately the same class proportions in the training and testing sets.
+
+### 🧾 Feature Description
+
+| Feature            | Description                    |
+| ------------------ | ------------------------------ |
+| `Age`              | Age of the applicant           |
+| `Sex`              | Applicant's recorded sex       |
+| `Job`              | Encoded employment skill level |
+| `Housing`          | Housing status                 |
+| `Saving accounts`  | Savings account category       |
+| `Checking account` | Checking account category      |
+| `Credit amount`    | Amount of credit requested     |
+| `Duration`         | Credit duration                |
+| `Purpose`          | Purpose of the credit          |
+| `Risk`             | Target variable                |
+
+---
+
+## 🗂️ Project Structure
 
 ```text
 Credit-risk-prediction/
 │
-├── backend/
+├── 📁 backend/
 │   ├── app.py
 │   └── schemas.py
 │
-├── data/
-│   ├── raw/
+├── 📁 data/
+│   ├── 📁 raw/
 │   │   └── cleaned_data.csv
-│   └── processed/
+│   └── 📁 processed/
 │       ├── train.csv
 │       └── test.csv
 │
-├── frontend/
+├── 📁 frontend/
 │   └── main.py
 │
-├── models/
+├── 📁 models/
 │   ├── stacking_classifier_model.pkl
 │   └── scaler.pkl
 │
-├── notebooks/
+├── 📁 notebooks/
 │   ├── 01_data_loading_and_eda.ipynb
 │   ├── 02_data_preprocessing.ipynb
 │   └── 03_model_training_and_evaluation.ipynb
@@ -148,75 +163,90 @@ Credit-risk-prediction/
 └── README.md
 ```
 
-*The tree documents the project files and artifacts used in the workflow; generated datasets and model files may be excluded from version control depending on the repository's current contents.*
+> 📌 The structure above documents the workflow and expected artifacts.&#x20;
 
-### Directory description
+### 📓 Notebook Guide
 
-- **`notebooks/`** — Contains the three notebooks for EDA, preprocessing, model training, tuning, and evaluation.
-- **`data/raw/`** — Contains the cleaned dataset generated during exploratory analysis.
-- **`data/processed/`** — Contains the training and testing datasets used for model development.
-- **`models/`** — Stores the fitted Stacking Classifier and the scaler used during training.
-- **`backend/`** — Contains FastAPI application logic and Pydantic request validation.
-- **`frontend/`** — Contains the Streamlit user interface.
-- **`requirements.txt`** — Lists the Python dependencies.
-- **`.gitignore`** — Specifies files and directories excluded from version control.
-
-## Technologies Used
-
-| Category | Technologies |
-|---|---|
-| Programming language | Python |
-| Data manipulation | Pandas, NumPy |
-| Data visualization | Matplotlib, Seaborn |
-| Machine learning | Scikit-learn, XGBoost |
-| Preprocessing | Pandas One-Hot Encoding, StandardScaler |
-| Model evaluation | Classification metrics, confusion matrix, ROC-AUC |
-| Hyperparameter optimization | RandomizedSearchCV |
-| Ensemble learning | StackingClassifier |
-| Model serialization | Joblib |
-| Backend | FastAPI, Pydantic |
-| Frontend | Streamlit |
-| API communication | REST API, HTTP requests |
-| Deployment | Render, Streamlit Community Cloud |
-| Development environment | Jupyter Notebook, VS Code |
+| Notebook                                 | Purpose                                                                  |
+| ---------------------------------------- | ------------------------------------------------------------------------ |
+| `01_data_loading_and_eda.ipynb`          | Data inspection, missing-value treatment, validation, and visualizations |
+| `02_data_preprocessing.ipynb`            | Categorical encoding, target encoding, and stratified splitting          |
+| `03_model_training_and_evaluation.ipynb` | Baseline models, hyperparameter tuning, stacking, and evaluation         |
 
 ---
 
-## Machine Learning Workflow
+## 🛠️ Tech Stack
 
-### 1. Data Loading and Exploratory Data Analysis
+\<p>
+&#x20; \<img src="[https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white](https://img.shields.io/badge/Python-3776AB?style=flat-square\&logo=python\&logoColor=white)" alt="Python">
+&#x20; \<img src="[https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white](https://img.shields.io/badge/Pandas-150458?style=flat-square\&logo=pandas\&logoColor=white)" alt="Pandas">
+&#x20; \<img src="[https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white](https://img.shields.io/badge/NumPy-013243?style=flat-square\&logo=numpy\&logoColor=white)" alt="NumPy">
+&#x20; \<img src="[https://img.shields.io/badge/Matplotlib-11557C?style=flat-square](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square)" alt="Matplotlib">
+&#x20; \<img src="[https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square](https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square)" alt="Seaborn">
+&#x20; \<img src="[https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square\&logo=scikitlearn\&logoColor=white)" alt="Scikit-learn">
+&#x20; \<img src="[https://img.shields.io/badge/XGBoost-189B62?style=flat-square](https://img.shields.io/badge/XGBoost-189B62?style=flat-square)" alt="XGBoost">
+&#x20; \<img src="[https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white](https://img.shields.io/badge/FastAPI-009688?style=flat-square\&logo=fastapi\&logoColor=white)" alt="FastAPI">
+&#x20; \<img src="[https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square\&logo=streamlit\&logoColor=white)" alt="Streamlit">
+&#x20; \<img src="[https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black](https://img.shields.io/badge/Render-46E3B7?style=flat-square\&logo=render\&logoColor=black)" alt="Render">
+\</p>
+
+| Category              | Tools                             |
+| --------------------- | --------------------------------- |
+| Programming           | Python                            |
+| Data analysis         | Pandas, NumPy                     |
+| Visualization         | Matplotlib, Seaborn               |
+| Machine learning      | Scikit-learn, XGBoost             |
+| Preprocessing         | Pandas, StandardScaler            |
+| Hyperparameter tuning | RandomizedSearchCV                |
+| Ensemble learning     | StackingClassifier                |
+| Model serialization   | Joblib                            |
+| Backend               | FastAPI, Pydantic                 |
+| Frontend              | Streamlit                         |
+| Deployment            | Render, Streamlit Community Cloud |
+
+---
+
+## ⚙️ Machine Learning Workflow
+
+The project follows a structured machine learning pipeline.
+
+```mermaid
+flowchart TD
+    A["📂 Raw Dataset"] --> B["🔎 Data Inspection and EDA"]
+    B --> C["🧹 Missing Value Treatment"]
+    C --> D["📊 Exploratory Visualizations"]
+    D --> E["🔢 Categorical Encoding"]
+    E --> F["✂️ Stratified Train-Test Split"]
+    F --> G["📏 Feature Scaling"]
+    G --> H["🤖 Train 9 Baseline Models"]
+    H --> I["🏆 Select Top 6 Candidates"]
+    I --> J["🎛️ Hyperparameter Tuning"]
+    J --> K["🧠 Compare Top 3 and Stacking"]
+    K --> L["📈 Final Model Evaluation"]
+    L --> M["💾 Save Model and Scaler"]
+    M --> N["⚡ FastAPI Backend"]
+    N --> O["🖥️ Streamlit Frontend"]
+    O --> P["☁️ Cloud Deployment"]
+```
+
+### 1️⃣ Data Loading and Exploratory Data Analysis
 
 **Notebook:** `01_data_loading_and_eda.ipynb`
 
-The first notebook focuses on understanding the dataset, examining data quality, and identifying patterns in applicant characteristics.
+The first notebook focuses on understanding the dataset and improving its data quality.
 
-#### Initial data inspection
+#### Missing-value treatment
 
-The original dataset contains 1,000 rows and 10 columns. The initial inspection includes:
+| Feature            | Missing Values |
+| ------------------ | -------------: |
+| `Saving accounts`  |            183 |
+| `Checking account` |            394 |
 
-- Dataset dimensions and column names.
-- Data types and non-null counts.
-- Missing values in individual columns.
-- Distribution of the target variable.
-- Distribution of categorical and numerical features.
-- Checks for invalid values in numerical columns.
+Missing values were replaced with the category `No Account`, preserving all 1,000 records.
 
-#### Missing value treatment
+#### Employment category mapping
 
-Missing values were present in two account-related columns:
-
-| Column | Missing values |
-|---|---:|
-| `Saving accounts` | 183 |
-| `Checking account` | 394 |
-
-Instead of dropping these records, missing account information was replaced with the category `No Account`.
-
-This preserves the dataset's original 1,000 records and allows the absence of account information to be represented explicitly.
-
-#### Job-level mapping
-
-The `Job` feature originally contains integer codes. These were mapped to descriptive labels for easier interpretation during visualization.
+The original integer-coded `Job` feature was mapped to descriptive labels for visualization.
 
 ```python
 job_mapping = {
@@ -227,47 +257,33 @@ job_mapping = {
 }
 ```
 
-#### Data validation
+#### Data validation and visualization
 
-The notebook also checks for invalid negative values in numerical features such as age, credit amount, and duration.
+The notebook also includes:
 
-#### Exploratory visualizations
+- Dataset dimensions, data types, and null-value checks.
+- Checks for invalid negative values in age, credit amount, and duration.
+- Count plots for categorical features.
+- Distribution analysis of numerical features.
+- Target class distribution analysis.
 
-Count plots and other relevant visualizations were used to investigate:
+The cleaned dataset was saved to `data/raw/cleaned_data.csv`.
 
-- Gender distribution.
-- Housing categories.
-- Job-level distribution.
-- Savings and checking account categories.
-- Credit purposes.
-- Credit risk class distribution.
-- Distributions of numerical features.
-
-The cleaned dataset was saved to:
-
-```text
-data/raw/cleaned_data.csv
-```
-
-### 2. Data Preprocessing
+### 2️⃣ Data Preprocessing
 
 **Notebook:** `02_data_preprocessing.ipynb`
 
-The second notebook prepares the cleaned data for machine learning.
-
 #### One-hot encoding
 
-One-hot encoding was applied to the following categorical features:
+The following features were one-hot encoded using `pandas.get_dummies()`:
 
 - `Sex`
 - `Housing`
 - `Purpose`
 
-Using `pandas.get_dummies()` converts categorical values into numerical indicator columns.
+#### Account category mapping
 
-#### Ordinal mapping of account categories
-
-Savings account categories were mapped to integer values:
+Savings account categories:
 
 ```python
 saving_map = {
@@ -279,7 +295,7 @@ saving_map = {
 }
 ```
 
-Checking account categories were mapped as follows:
+Checking account categories:
 
 ```python
 checking_map = {
@@ -290,29 +306,23 @@ checking_map = {
 }
 ```
 
-These mappings make the account features suitable for numerical model training. They also impose an ordering on the encoded categories, which is an assumption of this preprocessing approach.
+These mappings encode the categories numerically and impose an ordering on them.
 
 #### Target encoding
-
-The target variable was encoded as:
 
 ```text
 bad  → 1
 good → 0
 ```
 
-This makes the problem a binary classification task in which class `1` represents the higher-risk category.
-
 #### Train-test split
 
-The dataset was divided into training and testing sets using an 80:20 split with stratification.
+An 80:20 stratified split was performed.
 
-| Dataset | Shape |
-|---|---|
-| Training dataset | `(800, 17)` |
-| Testing dataset | `(200, 17)` |
-
-Stratification preserves approximately the original target class proportions in both subsets.
+| Dataset      | Shape       |
+| ------------ | ----------- |
+| Training set | `(800, 17)` |
+| Testing set  | `(200, 17)` |
 
 The resulting datasets were saved to:
 
@@ -321,137 +331,161 @@ data/processed/train.csv
 data/processed/test.csv
 ```
 
-### 3. Model Training and Evaluation
+### 3️⃣ Baseline Model Training
 
 **Notebook:** `03_model_training_and_evaluation.ipynb`
 
-The third notebook contains model training, baseline comparison, hyperparameter tuning, ensemble construction, and final evaluation.
+Nine classification algorithms were trained and evaluated.
 
-The training and testing datasets were separated into features and target labels:
-
-- `X_train`
-- `X_test`
-- `y_train`
-- `y_test`
-
-`StandardScaler` was used to scale the training features. The fitted scaler was retained for subsequent use when preparing inputs for the deployed model.
-
-#### Baseline model comparison
-
-Nine machine learning algorithms were trained and evaluated.
-
-| No. | Model |
-|---:|---|
-| 1 | Logistic Regression |
-| 2 | K-Nearest Neighbors (KNN) |
-| 3 | Gaussian Naive Bayes |
-| 4 | Decision Tree |
-| 5 | Random Forest |
-| 6 | Support Vector Machine (SVM) |
-| 7 | AdaBoost |
-| 8 | Gradient Boosting |
-| 9 | XGBoost |
+| No. | Algorithm              |
+| --: | ---------------------- |
+|   1 | Logistic Regression    |
+|   2 | K-Nearest Neighbors    |
+|   3 | Gaussian Naive Bayes   |
+|   4 | Decision Tree          |
+|   5 | Random Forest          |
+|   6 | Support Vector Machine |
+|   7 | AdaBoost               |
+|   8 | Gradient Boosting      |
+|   9 | XGBoost                |
 
 #### Evaluation metrics
 
-The models were evaluated using:
+- 🎯 **Accuracy:** Overall proportion of correct predictions.
+- 🔎 **Precision:** How many predicted bad-credit applicants actually belong to the bad-credit class.
+- 🚨 **Recall:** How many actual bad-credit applicants were correctly identified.
+- ⚖️ **F1-score:** Harmonic mean of precision and recall.
+- 📈 **ROC-AUC:** Ability to distinguish the two classes across classification thresholds.
 
-- **Accuracy:** Overall proportion of correct predictions.
-- **Precision:** Proportion of predicted bad-credit applicants who actually belong to the bad-credit class.
-- **Recall:** Proportion of actual bad-credit applicants correctly identified.
-- **F1-score:** Harmonic mean of precision and recall.
-- **ROC-AUC:** Measures the model's ability to distinguish between the two classes across classification thresholds.
-
-Since false negatives can be costly in credit risk assessment, recall is important. Precision is also important because excessive false positives can result in good-credit applicants being incorrectly classified as risky.
-
-The F1-score provides a useful balance between these two metrics.
+Because identifying bad-credit applicants is important, the F1-score was used to select promising candidates for further tuning.
 
 #### Baseline results
 
-| Model | Accuracy | Precision | Recall | F1-score | ROC-AUC |
-|---|---:|---:|---:|---:|---:|
-| XGBoost | 0.760 | 0.620 | 0.517 | 0.564 | 0.759 |
-| Decision Tree | 0.720 | 0.534 | 0.517 | 0.525 | 0.662 |
-| Random Forest | 0.755 | 0.634 | 0.433 | 0.515 | 0.762 |
-| Gradient Boosting | 0.740 | 0.587 | 0.450 | 0.509 | 0.766 |
-| Gaussian Naive Bayes | 0.665 | 0.439 | 0.417 | 0.427 | 0.654 |
-| AdaBoost | 0.720 | 0.556 | 0.333 | 0.417 | 0.769 |
-| KNN | 0.700 | 0.500 | 0.283 | 0.362 | 0.664 |
-| Logistic Regression | 0.725 | 0.609 | 0.233 | 0.337 | 0.647 |
-| SVM | 0.720 | 0.700 | 0.117 | 0.200 | 0.706 |
+| Model                | Accuracy | Precision | Recall | F1-score | ROC-AUC |
+| -------------------- | -------: | --------: | -----: | -------: | ------: |
+| XGBoost              |    0.760 |     0.620 |  0.517 |    0.564 |   0.759 |
+| Decision Tree        |    0.720 |     0.534 |  0.517 |    0.525 |   0.662 |
+| Random Forest        |    0.755 |     0.634 |  0.433 |    0.515 |   0.762 |
+| Gradient Boosting    |    0.740 |     0.587 |  0.450 |    0.509 |   0.766 |
+| Gaussian Naive Bayes |    0.665 |     0.439 |  0.417 |    0.427 |   0.654 |
+| AdaBoost             |    0.720 |     0.556 |  0.333 |    0.417 |   0.769 |
+| KNN                  |    0.700 |     0.500 |  0.283 |    0.362 |   0.664 |
+| Logistic Regression  |    0.725 |     0.609 |  0.233 |    0.337 |   0.647 |
+| SVM                  |    0.720 |     0.700 |  0.117 |    0.200 |   0.706 |
 
-*Values are rounded to three decimal places. The F1-score, precision, and recall refer to the bad-credit class (class 1).*
+*Precision, recall, and F1-score refer to class 1 (bad credit).*
 
-The six strongest candidates based on F1-score were selected for further optimization.
+### 4️⃣ Hyperparameter Tuning
 
-### 4. Hyperparameter Tuning
+The six strongest baseline candidates were selected for optimization using `RandomizedSearchCV`.
 
-The six selected candidates were subjected to hyperparameter tuning using `RandomizedSearchCV` with five-fold cross-validation and F1-score as the optimization metric.
+**Configuration:**
 
-This process searches for promising combinations of model parameters rather than relying entirely on default configurations.
+- Cross-validation folds: 5
+- Number of randomized parameter combinations: 20
+- Scoring metric: F1-score
+- Random state: 42
 
-The best-performing tuned candidates were:
+#### Best tuned candidates
 
-| Model | Best cross-validation F1-score |
-|---|---:|
-| Decision Tree | 0.5442 |
-| XGBoost | 0.5436 |
-| Gradient Boosting | 0.5042 |
+| Model             | Best CV F1-score |
+| ----------------- | ---------------: |
+| Decision Tree     |           0.5442 |
+| XGBoost           |           0.5436 |
+| Gradient Boosting |           0.5042 |
 
-The best hyperparameter combinations obtained during tuning were used to construct the final candidate estimators.
+These three models were carried forward to the final model comparison.
 
-### 5. Stacking Classifier
+### 5️⃣ Stacking Classifier
 
-After tuning, the three strongest candidates were compared individually and as an ensemble.
+The final ensemble combined three tuned base estimators:
 
-A `StackingClassifier` was constructed using:
+- Decision Tree
+- XGBoost
+- Gradient Boosting
 
-- **Base estimators:** Tuned Decision Tree, XGBoost, and Gradient Boosting classifiers.
-- **Final estimator:** Logistic Regression.
+Logistic Regression was used as the final estimator to combine their predictions.
 
-Stacking is an ensemble learning technique in which a meta-model learns how to combine predictions from multiple base models.
+The Stacking Classifier was evaluated against each of the three tuned models.
 
-The objective was to leverage the different predictive patterns captured by the individual algorithms rather than rely on a single classifier.
+| Model                   |  Accuracy | Precision | Recall | F1-score | ROC-AUC |
+| ----------------------- | --------: | --------: | -----: | -------: | ------: |
+| Gradient Boosting       |     0.775 |     0.636 |  0.583 |    0.609 |   0.765 |
+| **Stacking Classifier** | **0.785** | **0.698** |  0.500 |    0.583 |   0.782 |
+| XGBoost                 |     0.760 |     0.625 |  0.500 |    0.556 |   0.784 |
+| Decision Tree           |     0.705 |     0.533 |  0.133 |    0.213 |   0.720 |
 
-#### Final candidate comparison
+The Stacking Classifier was selected because it achieved the highest accuracy and precision among the final candidates, with a strong ROC-AUC score.
 
-| Model | Accuracy | Precision | Recall | F1-score | ROC-AUC |
-|---|---:|---:|---:|---:|---:|
-| Gradient Boosting | 0.775 | 0.636 | 0.583 | 0.609 | 0.765 |
-| Stacking Classifier | 0.785 | 0.698 | 0.500 | 0.583 | 0.782 |
-| XGBoost | 0.760 | 0.625 | 0.500 | 0.556 | 0.784 |
-| Decision Tree | 0.705 | 0.533 | 0.133 | 0.213 | 0.720 |
+Gradient Boosting achieved better recall and F1-score, so the selected ensemble does not outperform every candidate on every metric.
 
-The Stacking Classifier was selected as the final model because it achieved the highest accuracy among the final candidates, the highest precision, and a strong ROC-AUC score.
+### 6️⃣ Model Serialization
 
-Gradient Boosting achieved a higher F1-score and recall, so stacking is not the best model on every metric. The final selection reflects a trade-off among classification performance measures.
+The trained model was saved using Joblib:
 
-### 6. Final Model Evaluation
+```python
+import joblib
 
-The selected Stacking Classifier was evaluated on the held-out test dataset containing 200 applicants.
-
-#### Confusion matrix
-
-```text
-[[127, 13],
- [ 30, 30]]
+joblib.dump(
+    stack_model,
+    "../models/stacking_classifier_model.pkl"
+)
 ```
 
-The confusion matrix can be interpreted as follows:
+The fitted `StandardScaler` was also saved as `models/scaler.pkl` for reuse during inference.
 
-| Actual class | Predicted good credit (0) | Predicted bad credit (1) |
-|---|---:|---:|
-| Good credit (0) | 127 | 13 |
-| Bad credit (1) | 30 | 30 |
+---
 
-- **True negatives (127):** Good-credit applicants correctly classified as good credit.
-- **False positives (13):** Good-credit applicants incorrectly classified as bad credit.
-- **False negatives (30):** Bad-credit applicants incorrectly classified as good credit.
-- **True positives (30):** Bad-credit applicants correctly classified as bad credit.
+## 📈 Model Performance
 
-The model correctly classified 157 of the 200 test applicants.
+### Final Test Results
 
-#### Classification report
+\<p align="center">
+&#x20; \<img src="[https://img.shields.io/badge/Accuracy-78.5%25-2563EB?style=for-the-badge](https://img.shields.io/badge/Accuracy-78.5%25-2563EB?style=for-the-badge)" alt="Accuracy 78.5%">
+&#x20; \<img src="[https://img.shields.io/badge/Precision-69.8%25-0D9488?style=for-the-badge](https://img.shields.io/badge/Precision-69.8%25-0D9488?style=for-the-badge)" alt="Precision 69.8%">
+\</p>
+
+\<p align="center">
+&#x20; \<img src="[https://img.shields.io/badge/Recall-50.0%25-D97706?style=for-the-badge](https://img.shields.io/badge/Recall-50.0%25-D97706?style=for-the-badge)" alt="Recall 50%">
+&#x20; \<img src="[https://img.shields.io/badge/F1--Score-58.3%25-7C3AED?style=for-the-badge](https://img.shields.io/badge/F1--Score-58.3%25-7C3AED?style=for-the-badge)" alt="F1 score 58.3%">
+&#x20; \<img src="[https://img.shields.io/badge/ROC--AUC-78.2%25-475569?style=for-the-badge](https://img.shields.io/badge/ROC--AUC-78.2%25-475569?style=for-the-badge)" alt="ROC-AUC 78.2%">
+\</p>
+
+| Metric                 | Final Score |
+| ---------------------- | ----------: |
+| Accuracy               |       78.5% |
+| Precision — Bad Credit |       69.8% |
+| Recall — Bad Credit    |       50.0% |
+| F1-score — Bad Credit  |       58.3% |
+| ROC-AUC                |       78.2% |
+
+The final model correctly classified 157 out of 200 test applicants.
+
+The recall of 50% means that the model identified 30 out of 60 actual bad-credit applicants. The remaining 30 were incorrectly classified as good credit.
+
+This demonstrates why credit risk models must be evaluated using multiple metrics rather than accuracy alone.
+
+---
+
+## 🔍 Final Model Evaluation
+
+### Confusion Matrix
+
+```text
+                 Predicted
+                 Good   Bad
+Actual Good       127    13
+Actual Bad         30    30
+```
+
+| Outcome        | Count | Interpretation                                       |
+| -------------- | ----: | ---------------------------------------------------- |
+| True Negative  |   127 | Good-credit applicants correctly identified          |
+| False Positive |    13 | Good-credit applicants incorrectly flagged as bad    |
+| False Negative |    30 | Bad-credit applicants incorrectly classified as good |
+| True Positive  |    30 | Bad-credit applicants correctly identified           |
+
+### Classification Report
 
 ```text
               precision    recall  f1-score   support
@@ -464,126 +498,74 @@ The model correctly classified 157 of the 200 test applicants.
 weighted avg       0.78      0.79      0.77       200
 ```
 
-The final model achieved:
-
-- **Accuracy:** 78.5%
-- **Precision for bad credit:** Approximately 69.8%
-- **Recall for bad credit:** 50.0%
-- **F1-score for bad credit:** Approximately 58.3%
-- **ROC-AUC:** 0.782
-
-The model identifies half of the actual bad-credit applicants in the test set. The remaining half are false negatives, highlighting an important area for future improvement.
-
-The fitted model was serialized using Joblib:
-
-```python
-import joblib
-
-joblib.dump(
-    stack_model,
-    "../models/stacking_classifier_model.pkl"
-)
-```
-
-The fitted scaler was also saved for use during inference.
+> ⚠️ **Important:** These results are based on a held-out test set of 200 applicants. They do not establish that the model is ready for real lending decisions. Independent validation, fairness assessment, and cost-sensitive threshold selection would be required before real-world use.
 
 ---
 
-## Model Performance
+## 🏗️ Application Architecture
 
-The following chart summarizes the final model's test-set metrics.
+The application uses a decoupled frontend-backend architecture.
 
-| Metric | Score |
-|---|---:|
-| Accuracy | 78.5% |
-| Precision — bad-credit class | 69.8% |
-| Recall — bad-credit class | 50.0% |
-| F1-score — bad-credit class | 58.3% |
-| ROC-AUC | 78.2% |
-
-These metrics should be interpreted together. Accuracy measures overall correctness, while recall measures how many risky applicants are identified. Precision measures how often a bad-credit prediction is correct, and ROC-AUC measures ranking discrimination across thresholds.
-
-**Important:** These are test-set results from a small dataset of 200 applicants. They do not establish that the model is suitable for real lending decisions. Further validation, fairness analysis, probability calibration, and threshold selection would be necessary before practical financial use.
-
-## Application Architecture
-
-The deployed application separates the user interface from the machine learning inference service.
-
-```text
-User
-  |
-  v
-Streamlit Frontend
-  |
-  | Applicant information
-  v
-HTTP POST Request
-  |
-  v
-FastAPI Backend
-  |
-  | Validate input using Pydantic
-  | Apply the saved preprocessing/scaling
-  | Load the trained classifier
-  v
-Stacking Classifier
-  |
-  | Predict credit risk
-  v
-API JSON Response
-  |
-  v
-Streamlit Prediction Result
+```mermaid
+flowchart TD
+    A["👤 User"] --> B["🖥️ Streamlit Frontend"]
+    B -->|"Applicant details via HTTP POST"| C["⚡ FastAPI Backend"]
+    C --> D["✅ Pydantic Validation"]
+    D --> E["📏 Saved Scaler"]
+    E --> F["🤖 Stacking Classifier"]
+    F --> G["📦 Prediction Response"]
+    G --> B
+    B --> H["📊 Display Credit Risk"]
 ```
 
-### FastAPI backend
+### ⚡ FastAPI Backend
 
-The backend is implemented in `backend/app.py`, with input validation defined in `backend/schemas.py`.
+The backend is implemented in `backend/app.py`, with request validation defined in `backend/schemas.py`.
 
-Its responsibilities include:
+Responsibilities include:
 
-- Accepting applicant information through an HTTP endpoint.
-- Validating incoming data.
-- Preparing the input in the expected feature format.
+- Accepting applicant information through an API endpoint.
+- Validating request fields using Pydantic.
+- Preparing input features in the expected order.
 - Applying the saved scaler.
-- Generating a prediction using the trained Stacking Classifier.
-- Returning the prediction to the frontend.
+- Generating a credit risk prediction.
+- Returning the result as a JSON response.
 
-The backend is deployed on Render.
-
-### Streamlit frontend
+### 🖥️ Streamlit Frontend
 
 The frontend is implemented in `frontend/main.py`.
 
-Its responsibilities include:
+Responsibilities include:
 
-- Collecting applicant details through an interactive interface.
-- Sending the input to the deployed FastAPI endpoint.
-- Receiving the API response.
-- Displaying the predicted credit risk in a user-friendly format.
+- Collecting applicant information through an interactive interface.
+- Sending input data to the FastAPI backend.
+- Receiving the prediction response.
+- Displaying the predicted credit risk.
 
-The frontend is deployed on Streamlit Community Cloud.
 
-## Deployment
 
-Both components are available online.
+---
 
-| Component | Platform | Link |
-|---|---|---|
-| Frontend | Streamlit Community Cloud | [Open application](https://credit-risk-prediction04.streamlit.app/) |
-| Backend | Render | [Open API service](https://credit-risk-prediction-nkak.onrender.com) |
+## 🚀 Live Deployment
 
-The frontend communicates with the backend using the deployed API endpoint:
+| Component            | Platform                  | Link                                                                           |
+| -------------------- | ------------------------- | ------------------------------------------------------------------------------ |
+| 🌐 Frontend          | Streamlit Community Cloud | [Open Application](https://credit-risk-prediction04.streamlit.app/)            |
+| ⚡ Backend            | Render                    | [Open API Service](https://credit-risk-prediction-nkak.onrender.com)           |
+| 📚 API Documentation | FastAPI Swagger UI        | [Open API Docs](https://credit-risk-prediction-nkak.onrender.com/docs)         |
+| 💻 Source Code       | GitHub                    | [View Repository](https://github.com/ashutoshkashyap04/Credit-risk-prediction) |
+
+The deployed frontend communicates with the backend through:
 
 ```text
 https://credit-risk-prediction-nkak.onrender.com/predict
 ```
 
-The deployed frontend and backend are separate services, allowing the prediction interface to communicate with the model through a REST API.
+> 💡 Render's free services may take time to respond after periods of inactivity. The API documentation link may be unavailable if the service is sleeping or experiencing a deployment issue.
 
-## Run Locally
+---
 
-Follow these steps to run the project on your local machine.
+## 💻 Run Locally
 
 ### 1. Clone the repository
 
@@ -599,13 +581,13 @@ cd Credit-risk-prediction
 python -m venv .venv
 ```
 
-Activate it on Windows using PowerShell:
+Activate it on Windows PowerShell:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-Or use Git Bash:
+Or Git Bash:
 
 ```bash
 source .venv/Scripts/activate
@@ -619,49 +601,46 @@ pip install -r requirements.txt
 
 ### 4. Start the FastAPI backend
 
-From the project root, run:
+From the project root:
 
 ```bash
 uvicorn backend.app:app --host 0.0.0.0 --port 8000
 ```
 
-The API should now be available at:
+The API should be available at:
 
-```text
-http://127.0.0.1:8000
-```
-
-FastAPI's interactive documentation is normally available at:
-
-```text
-http://127.0.0.1:8000/docs
-```
+- Base URL: `http://127.0.0.1:8000`
+- Interactive documentation: `http://127.0.0.1:8000/docs`
 
 ### 5. Start the Streamlit frontend
 
-Open a second terminal, activate the same virtual environment, and run:
+Open another terminal, activate the virtual environment, and run:
 
 ```bash
 streamlit run frontend/main.py
 ```
 
-The Streamlit interface will display a local URL in the terminal.
+Make sure `frontend/main.py` points to the local API during local testing:
 
-**Configuration note:** Ensure that the frontend's API URL points to the backend you want to use. For local testing, use `http://127.0.0.1:8000/predict`; for the deployed application, use the Render endpoint listed in the deployment section.
+```python
+API_URL = "http://127.0.0.1:8000/predict"
+```
 
-The saved model and scaler must also be available at the paths expected by the backend.
+For the deployed application, configure it to use the Render endpoint instead.
 
-## API Usage
+**Note:** The model and scaler files must exist at the paths expected by the backend. If any datasets or model artifacts are excluded from Git, provide them separately before running the project.
 
-The FastAPI backend exposes a prediction endpoint:
+---
 
-```text
+## 🔌 API Usage
+
+The backend exposes a prediction endpoint:
+
+```http
 POST /predict
 ```
 
-It accepts applicant information and returns a credit risk prediction.
-
-### Example request
+### Example Request
 
 ```json
 {
@@ -677,84 +656,89 @@ It accepts applicant information and returns a credit risk prediction.
 }
 ```
 
-The field names must match the Pydantic schema defined in `backend/schemas.py`. In particular, `Saving_account` and `Checking_account` use underscores because spaces are not used in the request field names.
+The request field names must match the Pydantic schema in `backend/schemas.py`.
 
-### Example response
+In particular, the account fields use underscores in the API request even though the original dataset contains spaces in their column names.
 
-The API returns the predicted risk classification. Conceptually, the result maps to:
+### Prediction Mapping
 
-```json
-{
-  "prediction": 0,
-  "risk": "Good Credit"
-}
-```
+| Prediction | Result         |
+| ---------- | -------------- |
+| `0`        | 🟢 Good Credit |
+| `1`        | 🔴 Bad Credit  |
 
-This response illustrates the prediction mapping; the exact response keys depend on the implementation in `backend/app.py`.
-
-| Prediction | Classification |
-|---|---|
-| `0` | Good Credit |
-| `1` | Bad Credit |
-
-## Key Learnings
-
-This project provided practical experience in several areas of applied machine learning and deployment:
-
-- Performing exploratory data analysis on financial data.
-- Handling missing categorical information without removing records.
-- Encoding categorical variables for machine learning.
-- Creating stratified training and testing datasets.
-- Scaling numerical features for inference.
-- Comparing multiple classification algorithms using appropriate metrics.
-- Performing hyperparameter optimization with cross-validation.
-- Combining models through ensemble learning.
-- Interpreting confusion matrices and classification reports.
-- Saving trained artifacts with Joblib.
-- Developing a REST API with FastAPI and Pydantic.
-- Connecting a Streamlit frontend to a remote API.
-- Deploying a complete machine learning application using Render and Streamlit Community Cloud.
-
-## Limitations and Future Improvements
-
-Although the project demonstrates a complete machine learning and deployment workflow, several improvements could make it more robust.
-
-### Model performance
-
-- Improve recall for the bad-credit class to reduce missed risky applicants.
-- Investigate classification threshold optimization based on the relative costs of false positives and false negatives.
-- Evaluate additional models and feature engineering strategies.
-- Assess probability calibration and use cross-validation for more reliable performance estimates.
-
-### Data and preprocessing
-
-- Compare the current account-category mappings with alternative encoding approaches.
-- Investigate the impact of feature scaling and preprocessing choices.
-- Evaluate performance on larger, more representative datasets.
-- Review feature quality, data leakage risks, and reproducibility.
-
-### Production readiness
-
-- Add automated tests for input validation, preprocessing, and API predictions.
-- Add monitoring for prediction errors and changes in incoming data.
-- Improve API error handling and operational logging.
-- Conduct fairness and bias assessments before any real-world lending application.
-
-### Business validation
-
-The German Credit Risk Dataset is useful for educational and experimental work, but its size and scope limit conclusions about real financial institutions. Any practical deployment would require appropriate data governance, independent validation, fairness evaluation, and domain-specific risk controls.
-
-## Author
-
-**Ashutosh Kashyap**
-
-BS-MS in Artificial Intelligence & Cyber Security  
-Indian Institute of Technology Patna
-
-- **GitHub:** [ashutoshkashyap04](https://github.com/ashutoshkashyap04)
-- **Project Repository:** [Credit-risk-prediction](https://github.com/ashutoshkashyap04/Credit-risk-prediction)
-- **Live Application:** [Credit Risk Prediction](https://credit-risk-prediction04.streamlit.app/)
+The precise JSON response structure is defined by `backend/app.py`.
 
 ---
 
-*This project is intended for educational and demonstration purposes. Its predictions should not be used as the sole basis for real credit approval, rejection, or other consequential financial decisions.*
+## 💡 Key Learnings
+
+- 📊 Conducting exploratory data analysis on financial data.
+- 🧹 Handling missing categorical information.
+- 🔢 Encoding categorical features for machine learning.
+- ✂️ Performing stratified train-test splitting.
+- 📏 Applying feature scaling consistently during inference.
+- 🤖 Comparing multiple classification algorithms.
+- 🎛️ Optimizing model parameters using cross-validation.
+- 🧠 Combining classifiers through stacking.
+- 📈 Evaluating models using precision, recall, F1-score, ROC-AUC, and confusion matrices.
+- 💾 Serializing trained models with Joblib.
+- ⚡ Building REST APIs using FastAPI and Pydantic.
+- 🔗 Integrating a frontend with a remote inference API.
+- ☁️ Deploying a complete machine learning application to the cloud.
+
+---
+
+## 🔮 Future Improvements
+
+### 📈 Model Improvements
+
+- Increase recall for the bad-credit class.
+- Optimize the decision threshold based on the relative costs of false positives and false negatives.
+- Investigate alternative feature engineering and encoding approaches.
+- Evaluate probability calibration and more robust cross-validation strategies.
+
+### 🧪 Data and Validation
+
+- Test on larger and more representative credit datasets.
+- Conduct data quality and leakage checks.
+- Evaluate model stability across applicant subgroups.
+- Assess fairness and potential bias in predictions.
+
+### ⚙️ Production Improvements
+
+- Add automated tests for API validation and model inference.
+- Implement structured logging and improved error handling.
+- Monitor data drift and prediction quality.
+- Add reproducible preprocessing pipelines and model versioning.
+
+---
+
+## 👨‍💻 Author
+
+**Ashutosh Kashyap**
+
+🎓 BS-MS in Artificial Intelligence & Cyber Security
+🏛️ Indian Institute of Technology Patna
+
+\<p>
+&#x20; \<a href="[https://github.com/ashutoshkashyap04](https://github.com/ashutoshkashyap04)">
+&#x20;   \<img src="[https://img.shields.io/badge/GitHub-ashutoshkashyap04-181717?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/GitHub-ashutoshkashyap04-181717?style=for-the-badge\&logo=github\&logoColor=white)" alt="GitHub Profile">
+&#x20; \</a>
+&#x20; \<a href="[https://github.com/ashutoshkashyap04/Credit-risk-prediction](https://github.com/ashutoshkashyap04/Credit-risk-prediction)">
+&#x20;   \<img src="[https://img.shields.io/badge/Project-Credit%20Risk%20Prediction-2563EB?style=for-the-badge](https://img.shields.io/badge/Project-Credit%20Risk%20Prediction-2563EB?style=for-the-badge)" alt="Project Repository">
+&#x20; \</a>
+\</p>
+
+---
+
+\<p align="center">
+&#x20; \<strong>Built with Python, Machine Learning, FastAPI, and Streamlit.\</strong>
+\</p>
+
+\<p align="center">
+&#x20; ⭐ If you find this project useful, consider giving the repository a star!
+\</p>
+
+**Disclaimer:** This project is intended for educational and demonstration purposes. Its predictions should not be used as the sole basis for actual credit approval, rejection, or other consequential financial decisions.
+
